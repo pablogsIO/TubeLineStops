@@ -22,8 +22,13 @@ class TubeLineStop: UIView {
         case unionRightStopDown
     }
     
-    var lineColor = UIColor.brown
-    var positionInTheLine = StopType.forkLeftStopUp
+    var lineColor = UIColor.blue
+    
+    var positionInTheLine = StopType.tailLeft {
+        didSet{
+            self.setNeedsDisplay()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -67,7 +72,7 @@ class TubeLineStop: UIView {
             context?.move(to: CGPoint(x: width/8, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width/4, y: height-circleDiameter/2))
             context?.addLine(to: CGPoint(x: width, y: height-circleDiameter/2))
-            if positionInTheLine == .unionRightStopDown {
+            if positionInTheLine == .forkLeftStopDown {
                 yStopPosition = height-circleDiameter
             }
         case .forkedStopUp, .forkedStopDown:
@@ -75,7 +80,7 @@ class TubeLineStop: UIView {
             context?.addLine(to: CGPoint(x: width, y: yLinePosition))
             context?.move(to: CGPoint(x: 0, y: height-circleDiameter/2))
             context?.addLine(to: CGPoint(x: width, y: height-circleDiameter/2))
-            if positionInTheLine == .unionRightStopDown {
+            if positionInTheLine == .forkedStopDown {
                 yStopPosition = height-circleDiameter
             }
         case .unionRightStopUp, .unionRightStopDown:

@@ -10,16 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tubeStop: TubeLineStop!
-    
     @IBOutlet weak var tubeLine: UICollectionView!
     
     var datasource = LineDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tubeStop.lineColor = UIColor.red
         
         tubeLine.dataSource = datasource
         tubeLine.delegate = self
@@ -47,16 +43,6 @@ class ViewController: UIViewController {
 
 
 extension ViewController: UICollectionViewDelegateFlowLayout{
-    
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-      
-        print("Willdisplay")
-        
-    }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
