@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TubeLineStopCell" id="iEa-84-ZRF" customClass="TubeLineStopCVC" customModule="TubeLineStops" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-qF-sha" customClass="TubeLineStop" customModule="TubeLineStops" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="462" height="145"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WEF-qF-sha" secondAttribute="bottom" id="9ov-jQ-rcE"/>
+                <constraint firstItem="WEF-qF-sha" firstAttribute="leading" secondItem="iEa-84-ZRF" secondAttribute="leading" id="Igz-TM-Ag6"/>
+                <constraint firstAttribute="trailing" secondItem="WEF-qF-sha" secondAttribute="trailing" id="Tbk-8M-0St"/>
+                <constraint firstItem="WEF-qF-sha" firstAttribute="top" secondItem="iEa-84-ZRF" secondAttribute="top" id="UKO-ja-JTW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="clL-yW-cpu"/>
+            <size key="customSize" width="462" height="145"/>
+            <connections>
+                <outlet property="tubeLineStop" destination="WEF-qF-sha" id="Dbe-19-KuY"/>
+            </connections>
+            <point key="canvasLocation" x="181" y="411.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
