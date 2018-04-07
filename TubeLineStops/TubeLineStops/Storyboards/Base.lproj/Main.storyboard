@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P9h-DJ-JGO">
-                                <rect key="frame" x="0.0" y="122" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P9h-DJ-JGO">
+                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bA5-rW-2ap">
                                     <size key="itemSize" width="50" height="50"/>
@@ -41,6 +40,13 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P9h-DJ-JGO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="2jb-K0-wqf"/>
+                            <constraint firstItem="P9h-DJ-JGO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TLH-JL-cAI"/>
+                            <constraint firstItem="P9h-DJ-JGO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cXR-ey-yL0"/>
+                            <constraint firstItem="P9h-DJ-JGO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTS-D1-pOK"/>
+                            <constraint firstItem="P9h-DJ-JGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="udN-cK-1Th"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

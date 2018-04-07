@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E7A65A52078CE7700EC954F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6EA075022076B30600D2FF7B /* TubeLineStopCVC.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		6EA074FC207684A900D2FF7B /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +106,12 @@
 			children = (
 				6EDB2FC4206E22ED00237687 /* TubeLineView */,
 				6EA074FC207684A900D2FF7B /* AppDelegate */,
+				6E7A65A52078CE7700EC954F /* CollectionViewCell */,
 				6EA074FD207684B100D2FF7B /* Controllers */,
 				6EA074FF207684E600D2FF7B /* Datasources */,
 				6EA074FE207684BE00D2FF7B /* Storyboards */,
 				6EDB2FB9206E20FE00237687 /* Assets.xcassets */,
 				6EDB2FBE206E20FF00237687 /* Info.plist */,
-				6EA075022076B30600D2FF7B /* TubeLineStopCVC.swift */,
 			);
 			path = TubeLineStops;
 			sourceTree = "<group>";
