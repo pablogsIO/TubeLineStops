@@ -21,7 +21,20 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-qF-sha" customClass="TubeLineStop" customModule="TubeLineStops" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="462" height="145"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP1-hr-qc4">
+                                <rect key="frame" x="0.0" y="0.0" width="462" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KP1-hr-qc4" firstAttribute="top" secondItem="WEF-qF-sha" secondAttribute="top" id="1dx-xf-MM4"/>
+                            <constraint firstAttribute="trailing" secondItem="KP1-hr-qc4" secondAttribute="trailing" id="Zjd-SG-WAj"/>
+                            <constraint firstItem="KP1-hr-qc4" firstAttribute="leading" secondItem="WEF-qF-sha" secondAttribute="leading" id="vd7-MA-6nu"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -35,6 +48,7 @@
             <size key="customSize" width="462" height="145"/>
             <connections>
                 <outlet property="tubeLineStop" destination="WEF-qF-sha" id="Dbe-19-KuY"/>
+                <outlet property="tubeLineStopName" destination="KP1-hr-qc4" id="659-od-xVd"/>
             </connections>
             <point key="canvasLocation" x="181" y="411.5"/>
         </collectionViewCell>

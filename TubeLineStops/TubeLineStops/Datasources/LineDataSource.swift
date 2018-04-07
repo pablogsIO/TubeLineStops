@@ -18,15 +18,17 @@ class LineDataSource: NSObject, UICollectionViewDataSource {
     
     var lineStops: [LineStop] {
         var stops = [LineStop]()
-        let stop01 = LineStop(name: "01", type: TubeLineStop.StopType.tailLeft)
-        let stop02 = LineStop(name: "02", type: TubeLineStop.StopType.middle)
-        let stop03 = LineStop(name: "03", type: TubeLineStop.StopType.forkLeftStopUp)
-        let stop04 = LineStop(name: "04", type: TubeLineStop.StopType.forkedStopDown)
-        let stop05 = LineStop(name: "05", type: TubeLineStop.StopType.forkedStopUp)
-        let stop06 = LineStop(name: "06", type: TubeLineStop.StopType.forkedStopDown)
-        let stop07 = LineStop(name: "07", type: TubeLineStop.StopType.unionRightStopUp)
+        let stop01 = LineStop(name: "Ealing Brodway", type: TubeLineStop.StopType.tailLeft)
+        let stop02 = LineStop(name: "02", type: TubeLineStop.StopType.tailForkedLefStoptDown)
+        let stop03 = LineStop(name: "03", type: TubeLineStop.StopType.unionRightStopUp)
+        let stop04 = LineStop(name: "04", type: TubeLineStop.StopType.middle)
+        let stop05 = LineStop(name: "05", type: TubeLineStop.StopType.forkLeftStopDown)
+        let stop06 = LineStop(name: "06", type: TubeLineStop.StopType.forkedStopUp)
+        let stop07 = LineStop(name: "07", type: TubeLineStop.StopType.forkedStopEndDown)
         let stop08 = LineStop(name: "08", type: TubeLineStop.StopType.middle)
-        let stop09 = LineStop(name: "09", type: TubeLineStop.StopType.tailRight)
+        let stop09 = LineStop(name: "08", type: TubeLineStop.StopType.middle)
+        
+        let stop10 = LineStop(name: "09", type: TubeLineStop.StopType.tailRight)
         
         stops.append(stop01)
         stops.append(stop02)
@@ -37,6 +39,7 @@ class LineDataSource: NSObject, UICollectionViewDataSource {
         stops.append(stop07)
         stops.append(stop08)
         stops.append(stop09)
+        stops.append(stop10)
         
         return stops
         
@@ -57,7 +60,8 @@ class LineDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! TubeLineStopCVC
         
         cell.tubeLineStop.positionInTheLine = lineStops[indexPath.item].type
-
+        cell.tubeLineStopName.text = lineStops[indexPath.item].name
+        
         return cell
     }
 }

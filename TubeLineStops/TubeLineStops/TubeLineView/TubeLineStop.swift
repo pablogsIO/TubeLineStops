@@ -13,11 +13,13 @@ class TubeLineStop: UIView {
     enum StopType {
         case tailLeft
         case tailRight
+        case tailForkedLefStoptDown
         case middle
         case forkLeftStopUp
         case forkLeftStopDown
         case forkedStopUp
         case forkedStopDown
+        case forkedStopEndDown
         case unionRightStopUp
         case unionRightStopDown
     }
@@ -63,6 +65,18 @@ class TubeLineStop: UIView {
         case .tailRight:
             context?.move(to: CGPoint(x: 0, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width/2, y: yLinePosition))
+        case .tailForkedLefStoptDown:
+            context?.move(to: CGPoint(x: 0, y: yLinePosition))
+            context?.addLine(to: CGPoint(x: width, y: yLinePosition))
+            context?.move(to: CGPoint(x: width/2, y: height-circleDiameter/2))
+            context?.addLine(to: CGPoint(x: width, y: height-circleDiameter/2))
+            yStopPosition = height-circleDiameter
+        case .forkedStopEndDown:
+            context?.move(to: CGPoint(x: 0, y: yLinePosition))
+            context?.addLine(to: CGPoint(x: width, y: yLinePosition))
+            context?.move(to: CGPoint(x: 0, y: height-circleDiameter/2))
+            context?.addLine(to: CGPoint(x: width/2, y: height-circleDiameter/2))
+            yStopPosition = height-circleDiameter
         case .middle:
             context?.move(to: CGPoint(x: 0, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width, y: yLinePosition))
@@ -83,6 +97,7 @@ class TubeLineStop: UIView {
             if positionInTheLine == .forkedStopDown {
                 yStopPosition = height-circleDiameter
             }
+        
         case .unionRightStopUp, .unionRightStopDown:
             context?.move(to: CGPoint(x: 0, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width, y: yLinePosition))
@@ -92,6 +107,7 @@ class TubeLineStop: UIView {
             if positionInTheLine == .unionRightStopDown {
                 yStopPosition = height-circleDiameter
             }
+        
         }
         context?.strokePath()
         context?.addEllipse(in: CGRect(x: width/2, y: yStopPosition, width: circleDiameter, height: circleDiameter))

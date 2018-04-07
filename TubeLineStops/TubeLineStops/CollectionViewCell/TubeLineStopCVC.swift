@@ -11,4 +11,5 @@ import UIKit
 class TubeLineStopCVC: UICollectionViewCell {
     
     @IBOutlet weak var tubeLineStop: TubeLineStop!
+    @IBOutlet weak var tubeLineStopName: UILabel!
 }
