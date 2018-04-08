@@ -39,7 +39,7 @@ This class draws parts of the line, these parts could be the beginning of the li
 
 ## Demo 
 
-You have a fully functional demo in TubeLineStops folder
+You have a fully functional demo in TubeLineStops folder.
 
 
 
