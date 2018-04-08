@@ -37,13 +37,13 @@ This class draws parts of the line, these parts could be the beginning of the li
 </p>
 
 
-### Demo 
+## Demo 
 
 You have a fully functional demo in TubeLineStops folder
 
 
 
-### Example Usage
+## Example Usage
 
 ```swift
 
@@ -54,7 +54,7 @@ stop.stopType = .tailLeft
 
 ```
 
-### Licenses
+## Licenses
 
 All source code is licensed under the MIT License.
 
