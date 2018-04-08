@@ -24,7 +24,7 @@ class TubeLineStop: UIView {
         case unionRightStopDown
     }
     
-    var lineColor = UIColor.blue
+    var lineColor = UIColor.red
     
     var positionInTheLine = StopType.tailLeft {
         didSet{
