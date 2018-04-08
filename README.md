@@ -3,6 +3,10 @@
 ![](https://img.shields.io/badge/language-swift-blue.svg)
 
 
+<p align="center">
+<img src="Images/tubeLineStops.gif"/>
+</p>
+
 A simple UIView subclass that allows you to draw tube line stops.
 
 This class draws parts of the line, these parts could be the beginning of the line, the end, forks, unions etc. You can see here different types: 
@@ -42,6 +46,7 @@ stop.lineColor = UIColor.red
 stop.stopType = .tailLeft
 
 ```
+
 
 
 
