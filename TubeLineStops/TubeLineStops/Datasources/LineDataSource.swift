@@ -58,7 +58,7 @@ class LineDataSource: NSObject, UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! TubeLineStopCVC
         
-        cell.tubeLineStop.positionInTheLine = lineStops[indexPath.item].type
+        cell.tubeLineStop.stopType = lineStops[indexPath.item].type
         cell.tubeLineStopName.text = lineStops[indexPath.item].name
         
         return cell

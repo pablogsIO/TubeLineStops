@@ -26,7 +26,7 @@ class TubeLineStop: UIView {
     
     var lineColor = UIColor.red
     
-    var positionInTheLine = StopType.tailLeft {
+    var stopType = StopType.tailLeft {
         didSet{
             self.setNeedsDisplay()
         }
@@ -58,7 +58,7 @@ class TubeLineStop: UIView {
         context?.setStrokeColor(color)
         context?.setFillColor(self.lineColor.cgColor)
         
-        switch positionInTheLine {
+        switch stopType {
         case .tailLeft:
             context?.move(to: CGPoint(x: width/2, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width, y: yLinePosition))
@@ -68,7 +68,7 @@ class TubeLineStop: UIView {
         case .tailForkedLefStoptDown, .forkedStopEndDown:
             var xMoveTo = width/2
             var xAddLine = width
-            if positionInTheLine == .forkedStopEndDown {
+            if stopType == .forkedStopEndDown {
                 xMoveTo = 0
                 xAddLine = width/2
             }
@@ -86,7 +86,7 @@ class TubeLineStop: UIView {
             context?.move(to: CGPoint(x: width/8, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width/4, y: height-circleDiameter/2))
             context?.addLine(to: CGPoint(x: width, y: height-circleDiameter/2))
-            if positionInTheLine == .forkLeftStopDown {
+            if stopType == .forkLeftStopDown {
                 yStopPosition = height-circleDiameter
             }
         case .forkedStopUp, .forkedStopDown:
@@ -94,7 +94,7 @@ class TubeLineStop: UIView {
             context?.addLine(to: CGPoint(x: width, y: yLinePosition))
             context?.move(to: CGPoint(x: 0, y: height-circleDiameter/2))
             context?.addLine(to: CGPoint(x: width, y: height-circleDiameter/2))
-            if positionInTheLine == .forkedStopDown {
+            if stopType == .forkedStopDown {
                 yStopPosition = height-circleDiameter
             }
         
@@ -104,7 +104,7 @@ class TubeLineStop: UIView {
             context?.move(to: CGPoint(x: width-width/8, y: yLinePosition))
             context?.addLine(to: CGPoint(x: width-width/4, y: height-circleDiameter/2))
             context?.addLine(to: CGPoint(x: 0, y: height-circleDiameter/2))
-            if positionInTheLine == .unionRightStopDown {
+            if stopType == .unionRightStopDown {
                 yStopPosition = height-circleDiameter
             }
         
