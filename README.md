@@ -54,11 +54,11 @@ stop.stopType = .tailLeft
 
 ```
 
-## Licenses
+## License
 
-All source code is licensed under the MIT License.
+TubeLineStops is available under the MIT license. See the LICENSE file for more info.
 
-
+If you use it, i'll be happy to know about it.
 
 
 
