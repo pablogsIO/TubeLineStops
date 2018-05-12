@@ -1,6 +1,9 @@
 # TubeLineStops - Swift
 
 ![](https://img.shields.io/badge/language-swift-blue.svg)
+![](https://img.shields.io/badge/version-1.0.0-red.svg)
+[![License](https://img.shields.io/cocoapods/l/RecordButton.svg?style=flat)](https://github.com/pablogsIO/TubeLineStops)
+[![Platform](https://img.shields.io/cocoapods/p/RecordButton.svg?style=flat)](https://github.com/pablogsIO/TubeLineStops)
 
 
 <p align="center">
@@ -9,7 +12,7 @@
 
 A simple UIView subclass that allows you to draw tube line stops.
 
-This class draws parts of the line, these parts could be the beginning of the line, the end, forks, unions etc. You can see here different types: 
+This class draws parts of the line, these parts could be the beginning of the line, the end, forks, unions etc. You can see here different types:
 
 <p align="center">
 <img src="Images/tailLeft.png"/>
@@ -37,7 +40,7 @@ This class draws parts of the line, these parts could be the beginning of the li
 </p>
 
 
-## Demo 
+## Demo
 
 You have a fully functional demo in TubeLineStops folder.
 
@@ -57,8 +60,3 @@ stop.stopType = .tailLeft
 ## Licenses
 
 All source code is licensed under the MIT License.
-
-
-
-
-
